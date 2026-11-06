@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101126" />
+  <meta name="description" content="Discover and register for unforgettable events with EventSphere." />
+  <title>EventSphere — Find your next experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="EventSphere home"><span class="brand-icon">✦</span> Event<span>Sphere</span></a>
+      <div class="nav-links"><a href="#events">Explore events</a><a href="#how-it-works">How it works</a><a href="#about">About</a></div>
+      <div class="nav-actions"><button class="icon-button" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">☀</button><a href="#events" class="button button-small">Explore now <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow hero-glow-one"></div><div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-inner">
+        <div class="eyebrow"><span class="pulse"></span> THE CITY IS CALLING</div>
+        <h1>Make memories.<br /><span class="gradient-text">Not just plans.</span></h1>
+        <p class="hero-copy">From electric concerts to inspiring workshops, discover the experiences worth showing up for. Your next unforgettable moment starts here.</p>
+        <div class="hero-buttons"><a href="#events" class="button">Discover events <span aria-hidden="true">↗</span></a><a href="#how-it-works" class="button button-outline">How it works <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-stats"><div><strong>12+</strong><span>Curated events</span></div><div class="stat-divider"></div><div><strong>6</strong><span>Categories</span></div><div class="stat-divider"></div><div><strong>100%</strong><span>Good vibes</span></div></div>
+      </div>
+      <div class="hero-bottom"><div class="container"><span>DISCOVER WHAT'S NEXT</span><span aria-hidden="true">↓</span></div></div>
+    </section>
+    <section class="section events-section" id="events">
+      <div class="container">
+        <div class="section-kicker">THE LINEUP <span>✦</span></div>
+        <div class="section-heading"><div><h2>Find your <em>thing.</em></h2><p>Big moments, new connections, unforgettable stories.</p></div><div class="event-count" id="eventCount">12 events to explore</div></div>
+        <div class="filters-bar"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search events</span><input id="searchInput" type="search" placeholder="Search by event, city or venue..." autocomplete="off" /></label><div class="filter-tabs" id="filterTabs" aria-label="Filter by category"></div></div>
+        <div class="events-grid" id="eventsGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><h3>No events found</h3><p>Try another search or select a different category.</p><button class="button" id="resetFilters">Clear filters</button></div>
+      </div>
+    </section>
+    <section class="section how-section" id="how-it-works"><div class="container"><div class="section-kicker">SIMPLE BY DESIGN <span>✦</span></div><h2>Three steps to <em>show up.</em></h2><div class="steps-grid"><article class="step"><span class="step-num">01 / DISCOVER</span><div class="step-icon">⌕</div><h3>Find your vibe</h3><p>Browse upcoming experiences and filter by what excites you.</p></article><article class="step"><span class="step-num">02 / EXPLORE</span><div class="step-icon">✧</div><h3>Get the details</h3><p>See dates, venues, descriptions and everything you need to know.</p></article><article class="step"><span class="step-num">03 / REGISTER</span><div class="step-icon">✓</div><h3>Save your spot</h3><p>Register in seconds and receive an instant confirmation on screen.</p></article></div></div></section>
+    <section class="about-section" id="about"><div class="container about-inner"><div><div class="section-kicker">ABOUT EVENTSPHERE <span>✦</span></div><h2>Life happens <em>out there.</em></h2><p>We believe the best stories begin when people come together. EventSphere makes it easy to discover what’s happening and take part in something memorable.</p></div><a class="button button-light" href="#events">Find your next event ↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-icon">✦</span> Event<span>Sphere</span></a><p>Made for moments that matter. © <span id="year"></span> EventSphere.</p><a href="#home">Back to top ↑</a></div></footer>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Close dialog">×</button><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
